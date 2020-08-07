@@ -1,17 +1,17 @@
-name = "Cupper"
-license = "MIT"
-licenselink = "https://github.com/zwbetz-gh/cupper-hugo-theme/blob/master/LICENSE"
-description = "An accessibility-friendly Hugo theme, ported from the original Cupper project."
-homepage = "https://github.com/zwbetz-gh/cupper-hugo-theme"
-tags = ["accessible", "blog", "documentation", "dark"]
-features = ["accessible", "blog", "documentation", "dark"]
+name = "Arwiki"
+license = "GPL V3"
+licenselink = "https://gitlab.com/avron/arwiki/-/blob/master/LICENSE"
+description = "An accessibility-friendly Hugo theme, modified, beautified and ported from the original Cupper Hugo theme."
+homepage = "https://gitlab.com/avron/arwiki/"
+tags = ["accessible", "blog", "documentation", "dark", "wiki"]
+features = ["accessible", "blog", "documentation", "dark", "wiki"]
 min_version = "0.60.1"
 
 [author]
-  name = "Zachary Betz"
-  homepage = "https://zwbetz.com/"
+  name = "Abaraham Raji"
+  homepage = "https://abrahamraji.in"
 
 [original]
-  name = "Cupper"
-  homepage = "https://thepaciellogroup.github.io/cupper/"
-  repo = "https://github.com/ThePacielloGroup/cupper"
+  name = "Cupper Hugo Theme"
+  homepage = "https://cupper-hugo-theme.netlify.com/"
+  repo = "https://github.com/zwbetz-gh/cupper-hugo-theme"
