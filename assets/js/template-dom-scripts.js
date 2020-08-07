@@ -96,7 +96,12 @@
 }());
 
 /* Switch and persist theme */
-(function () {
+ const chk = document.getElementById('themer');
+
+chk.addEventListener('change', () => {
+	document.body.classList.toggle('dark');
+});
+/*(function () {
   function CSSSupported (property, value) {
     var prop = property + ':',
         el = document.createElement('test'),
@@ -135,3 +140,4 @@
   darkTheme('screen');
   {{ end }}
 }());
+*/
