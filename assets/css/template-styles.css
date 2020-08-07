@@ -679,7 +679,7 @@ pre[class*=language-] code * {
 }
 [data-expands] {
     text-align: left;
-    color: #1D2021;
+    color: inherit;
     border: 0;
     background: none;
     width: 100%;
