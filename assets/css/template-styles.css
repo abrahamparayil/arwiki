@@ -249,12 +249,13 @@ label {
   color: #fefefe;
   padding: 0.25em 0.75em;
   margin: 0.5rem;
+font-size: 1.25rem;
 }
 [for="themer"] [aria-hidden]::before {
-  content: 'off';
+  content: 'Light';
 }
 [for="themer"] :checked + [aria-hidden]::before {
-  content: 'on';
+  content: 'Dark';
 }
 
 /* Tables */
