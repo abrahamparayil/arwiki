@@ -338,7 +338,9 @@ caption {
     height: 100%;
 }
 .intro {
-  flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center ;
 }
 .patterns {
   flex: 1 1 auto;
@@ -372,9 +374,14 @@ caption {
 
 /* Patterns navigation */
 .patterns {
+    display: flex;
+    flex-direction: column;
     overflow: auto;
     margin-top: 1.5rem;
     min-width: max-content;
+}
+.themer-nav{
+    margin: 0px auto;
 }
 .patterns * {
     margin-top: 0;
