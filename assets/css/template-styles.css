@@ -221,7 +221,7 @@ button {
     font-family: inherit;
     background: #1D2021;
     color: #fefefe;
-    padding: 0.75rem;
+    padding: 0.35rem 0.75rem;
     border: 0;
 }
 [data-launch] {
@@ -421,7 +421,8 @@ caption {
 /* Menu button */
 #menu-button {
     display: none;
-    width: 100%;
+    width: 50%;
+    margin: 0px auto;
     text-align: center;
 }
 #menu-button:focus {
