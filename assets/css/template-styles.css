@@ -338,6 +338,11 @@ caption {
     flex-direction: column;
     text-align: center ;
 }
+.intro img{
+    width: 200px;
+    border-radius: 200px;
+    margin: 10px;
+}
 .patterns {
   flex: 1 1 auto;
 }
