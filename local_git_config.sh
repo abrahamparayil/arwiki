@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-git config --local user.name "zwbetz-gh"
-git config --local user.email "zwbetz@gmail.com"
+git config --local user.name "Abraham Raji"
+git config --local user.email "avronr@tuta.io"
 
 git config --local --list
