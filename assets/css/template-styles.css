@@ -326,6 +326,8 @@ caption {
     top: 0;
     left: 0;
     border-right: 2px dashed;
+    background: url({{ "images/background.png" | absURL}}) fixed center;
+    color: #fefefe;
 }
 .intro-and-nav > div {
     padding: 2.25rem;
@@ -421,9 +423,10 @@ caption {
 
 /* After */
 .pattern [aria-current] {
-  background-color: #076678;
+  background-color: #1d2021;
   clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
   color: #fefefe;
+  border: solid black;
 }
 
 /* Menu button */
