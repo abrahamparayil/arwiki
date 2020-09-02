@@ -21,7 +21,10 @@ archlinux-test:
     - cp -r ../i18n themes/arwiki
     - cp -r ../layouts themes/arwiki
     - cp ../local_git_config.sh themes/arwiki
-    - cp -r static themes/arwiki
+    - cp -r ../static themes/arwiki
+    - cp -r ../assets themes/arwiki
+    - cp -r ../exampleSite themes/arwiki
+    - cp -r ../images themes/arwiki
     - ls
     - cp ../theme.toml themes/arwiki
     - rm -rf ../content && cp -r themes/arwiki/exampleSite/content/ . 
@@ -48,11 +51,13 @@ pages:
     - cp -r ../i18n themes/arwiki
     - cp -r ../layouts themes/arwiki
     - cp ../local_git_config.sh themes/arwiki
-    - cp -r static themes/arwiki
-    - cp ../theme.toml themes/arwiki
+    - cp -r ../static themes/arwiki
+    - cp -r ../assets themes/arwiki
+    - cp -r ../exampleSite themes/arwiki
+    - cp -r ../images themes/arwiki
     - ls
     - rm -rf ../content && cp -r themes/arwiki/exampleSite/content/ . 
-    - rm config.toml && cp themes/arwiki/exampleSite/deploy.yaml ./config.yaml 
+    - rm config.toml && cp themes/arwiki/exampleSite/deploy.yaml ./config.yaml
     - hugo
     - mv public ../
   artifacts:
