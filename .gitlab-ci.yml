@@ -20,7 +20,7 @@ archlinux-test:
     - cp -r ../data themes/arwiki
     - cp -r ../i18n themes/arwiki
     - cp -r ../layouts themes/arwiki
-    - cp ../local_git_config.sh
+    - cp ../local_git_config.sh themes/arwiki
     - cp -r static themes/arwiki
     - cp ../theme.toml themes/arwiki
     - rm -rf ../content && cp -r themes/arwiki/exampleSite/content/ . 
@@ -46,7 +46,7 @@ pages:
     - cp -r ../data themes/arwiki
     - cp -r ../i18n themes/arwiki
     - cp -r ../layouts themes/arwiki
-    - cp ../local_git_config.sh
+    - cp ../local_git_config.sh themes/arwiki
     - cp -r static themes/arwiki
     - cp ../theme.toml themes/arwiki
     - rm -rf ../content && cp -r themes/arwiki/exampleSite/content/ . 
