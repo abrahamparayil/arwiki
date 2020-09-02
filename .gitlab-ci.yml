@@ -8,7 +8,7 @@ stages:
 
 debian-test:
   stage: build
-  image: "debian:stable"
+  image: "debian:testing"
   before_script:
     - apt update -y 
     - apt install -y git hugo neofetch
