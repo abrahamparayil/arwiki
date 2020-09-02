@@ -49,6 +49,7 @@ pages:
     - cp ../local_git_config.sh themes/arwiki
     - cp -r static themes/arwiki
     - cp ../theme.toml themes/arwiki
+    - ls
     - rm -rf ../content && cp -r themes/arwiki/exampleSite/content/ . 
     - rm config.toml && cp themes/arwiki/exampleSite/deploy.yaml ./config.yaml 
     - hugo
