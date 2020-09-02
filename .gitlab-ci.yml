@@ -61,7 +61,6 @@ fedora-test:
   stage: build
   image: "fedora:latest"
   before_script:
-    - dnf update -y 
     - dnf install -y git hugo neofetch
   script:
     - neofetch
