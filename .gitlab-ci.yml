@@ -24,7 +24,7 @@ debian-test:
     - cp -r ../static themes/arwiki
     - cp ../theme.toml themes/arwiki
     - rm -rf ../content && cp -r themes/arwiki/exampleSite/content/ . 
-    - rm config.toml && cp themes/arwiki/exampleSite/deploy.toml ./config.toml
+    - rm config.yaml && cp themes/arwiki/exampleSite/deploy.yaml ./config.yaml
     - mkdir static/img && cp themes/arwiki/static/img/logo.png static/img/
     - hugo
     - echo "Build on Debian Stable successfull!"
@@ -47,7 +47,7 @@ fedora-test:
     - cp -r ../static themes/arwiki
     - cp ../theme.toml themes/arwiki
     - rm -rf ../content && cp -r themes/arwiki/exampleSite/content/ . 
-    - rm config.toml && cp themes/arwiki/exampleSite/deploy.toml ./config.toml
+    - rm config.toml && cp themes/arwiki/exampleSite/deploy.yaml ./config.yaml
     - mkdir static/img && cp themes/arwiki/static/img/logo.png static/img 
     - hugo
     - echo "Build on Fedora Latest successfull!"
@@ -70,7 +70,7 @@ archlinux-test:
     - cp -r ../static themes/arwiki
     - cp ../theme.toml themes/arwiki
     - rm -rf ../content && cp -r themes/arwiki/exampleSite/content/ . 
-    - rm config.toml && cp themes/arwiki/exampleSite/deploy.toml ./config.toml 
+    - rm config.toml && cp themes/arwiki/exampleSite/deploy.yaml ./config.yaml 
     - mkdir static/img && cp themes/arwiki/static/img/logo.png static/img    
     - hugo
     - echo "Build on Archlinux Latest successfull!"
@@ -97,7 +97,7 @@ pages:
     - cp -r ../static themes/arwiki
     - cp ../theme.toml themes/arwiki
     - rm -rf ../content && cp -r themes/arwiki/exampleSite/content/ . 
-    - rm config.toml && cp themes/arwiki/exampleSite/deploy.toml ./config.toml 
+    - rm config.toml && cp themes/arwiki/exampleSite/deploy.yaml ./config.yaml 
     - mkdir static/img && cp themes/arwiki/static/img/logo.png static/img
     - hugo
     - mv public ../
