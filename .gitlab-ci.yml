@@ -46,7 +46,9 @@ pages:
   script:
     - hugo new site test && cd test
     - mkdir themes/arwiki
-    - cat /etc/os-release
+    - apk update
+    - apk upgrade
+    - apk add git
     - cp -r ../archetypes themes/arwiki 
     - cp -r ../data themes/arwiki
     - cp -r ../i18n themes/arwiki
