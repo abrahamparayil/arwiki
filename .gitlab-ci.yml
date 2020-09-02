@@ -57,7 +57,7 @@ archlinux-test:
     - hugo
     - echo "Build on Archlinux Latest successfull!"
 
-archlinux-test:
+fedora-test:
   stage: build
   image: "fedora:latest"
   before_script:
