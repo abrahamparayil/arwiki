@@ -6,50 +6,6 @@ stages:
   - test
   - pages
 
-debian-test:
-  stage: build
-  image: "debian:stable"
-  before_script:
-    - apt-get update -y
-    - apt-get install -y git hugo neofetch
-  script:
-    - neofetch
-    - hugo new site test && cd test
-    - mkdir themes/arwiki 
-    - cp -r ../archetypes themes/arwiki
-    - cp -r ../exampleSite themes/arwiki 
-    - cp -r ../layouts themes/arwiki
-    - cp ../LICENSE themes/arwiki
-    - cp ../README.md themes/arwiki
-    - cp -r ../static themes/arwiki
-    - cp ../theme.toml themes/arwiki
-    - rm -rf ../content && cp -r themes/arwiki/exampleSite/content/ . 
-    - rm config.yaml && cp themes/arwiki/exampleSite/deploy.yaml ./config.yaml
-    - hugo
-    - echo "Build on Debian Stable successfull!"
-
-fedora-test:
-  stage: build
-  image: "fedora:latest"
-  before_script:
-    - dnf update -y
-    - dnf install -y git hugo neofetch
-  script:
-    - neofetch
-    - hugo new site test && cd test
-    - mkdir themes/arwiki 
-    - cp -r ../archetypes themes/arwiki
-    - cp -r ../exampleSite themes/arwiki 
-    - cp -r ../layouts themes/arwiki
-    - cp ../LICENSE themes/arwiki
-    - cp ../README.md themes/arwiki
-    - cp -r ../static themes/arwiki
-    - cp ../theme.toml themes/arwiki
-    - rm -rf ../content && cp -r themes/arwiki/exampleSite/content/ . 
-    - rm config.toml && cp themes/arwiki/exampleSite/deploy.yaml ./config.yaml
-    - hugo
-    - echo "Build on Fedora Latest successfull!"
-
 archlinux-test:
   stage: build
   image: "archlinux:latest"
@@ -59,13 +15,13 @@ archlinux-test:
   script:
     - neofetch
     - hugo new site test && cd test
-    - mkdir themes/arwiki 
-    - cp -r ../archetypes themes/arwiki
-    - cp -r ../exampleSite themes/arwiki 
+    - mkdir themes/arwiki
+    = cp -r ../archetypes themes/arwiki 
+    - cp -r ../data themes/arwiki
+    - cp -r ../i18n themes/arwiki
     - cp -r ../layouts themes/arwiki
-    - cp ../LICENSE themes/arwiki
-    - cp ../README.md themes/arwiki
-    - cp -r ../static themes/arwiki
+    - cp ../local_git_config.sh
+    - cp -r static themes/arwiki
     - cp ../theme.toml themes/arwiki
     - rm -rf ../content && cp -r themes/arwiki/exampleSite/content/ . 
     - rm config.toml && cp themes/arwiki/exampleSite/deploy.yaml ./config.yaml 
