@@ -6,6 +6,32 @@ stages:
   - test
   - pages
 
+debian-test:
+  stage: build
+  image: "debian:stable"
+  before_script:
+    - apt update -y 
+    - apt install -y git hugo neofetch
+  script:
+    - neofetch
+    - hugo new site test && cd test
+    - mkdir themes/arwiki
+    - cp -r ../archetypes themes/arwiki 
+    - cp -r ../data themes/arwiki
+    - cp -r ../i18n themes/arwiki
+    - cp -r ../layouts themes/arwiki
+    - cp ../local_git_config.sh themes/arwiki
+    - cp -r ../static themes/arwiki
+    - cp -r ../assets themes/arwiki
+    - cp -r ../exampleSite themes/arwiki
+    - cp -r ../images themes/arwiki
+    - cp ../theme.toml themes/arwiki
+    - rm -rf ../content && cp -r themes/arwiki/exampleSite/content/ . 
+    - rm config.toml && cp themes/arwiki/exampleSite/deploy.yaml ./config.yaml 
+    - hugo
+    - echo "Build on Archlinux Latest successfull!"
+
+
 archlinux-test:
   stage: build
   image: "archlinux:latest"
@@ -25,7 +51,6 @@ archlinux-test:
     - cp -r ../assets themes/arwiki
     - cp -r ../exampleSite themes/arwiki
     - cp -r ../images themes/arwiki
-    - ls
     - cp ../theme.toml themes/arwiki
     - rm -rf ../content && cp -r themes/arwiki/exampleSite/content/ . 
     - rm config.toml && cp themes/arwiki/exampleSite/deploy.yaml ./config.yaml 
@@ -58,7 +83,6 @@ pages:
     - cp -r ../assets themes/arwiki
     - cp -r ../exampleSite themes/arwiki
     - cp -r ../images themes/arwiki
-    - ls
     - rm -rf ../content && cp -r themes/arwiki/exampleSite/content/ . 
     - rm config.toml && cp themes/arwiki/exampleSite/deploy.yaml ./config.yaml
     - hugo
