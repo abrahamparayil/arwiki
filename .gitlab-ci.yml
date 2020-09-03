@@ -37,8 +37,7 @@ ubuntu-test:
   image: "ubuntu:latest"
   before_script:
     - apt update -y
-    - apt install -y tzdata 
-    - apt install -y git hugo neofetch
+    - apt install -y tzdata git hugo neofetch
   script:
     - neofetch
     - hugo new site test && cd test
