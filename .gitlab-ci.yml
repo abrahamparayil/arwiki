@@ -33,7 +33,7 @@ debian-test:
 
 ubuntu-test:
   stage: build
-  image: "ubuntu:stable"
+  image: "ubuntu:latest"
   before_script:
     - apt update -y 
     - apt install -y git hugo neofetch
