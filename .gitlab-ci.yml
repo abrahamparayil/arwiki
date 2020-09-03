@@ -36,8 +36,8 @@ ubuntu-test:
   stage: build
   image: "ubuntu:latest"
   before_script:
-    - apt install -y tzdata
-    - apt update -y 
+    - apt update -y
+    - apt install -y tzdata 
     - apt install -y git hugo neofetch
   script:
     - neofetch
