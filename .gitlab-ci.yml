@@ -1,5 +1,6 @@
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
+  DEBIAN_FRONTEND: noninteractive
 
 stages:
   - build
@@ -35,7 +36,7 @@ ubuntu-test:
   stage: build
   image: "ubuntu:latest"
   before_script:
-    - timedatectl set-timezone Asia/Kolkata
+    - apt install -y tzdata
     - apt update -y 
     - apt install -y git hugo neofetch
   script:
