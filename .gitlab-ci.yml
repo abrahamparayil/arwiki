@@ -35,6 +35,7 @@ ubuntu-test:
   stage: build
   image: "ubuntu:latest"
   before_script:
+    - timedatectl set-timezone Asia/Kolkata
     - apt update -y 
     - apt install -y git hugo neofetch
   script:
