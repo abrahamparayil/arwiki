@@ -33,11 +33,8 @@ debian-test:
 
 ubuntu-test:
   stage: build
-  image: "ubuntu:rolling"
+  image: "ubuntu:stable"
   before_script:
-    - apt-get -y install tzdata
-    - ln -fs /usr/share/zoneinfo/America/New_York /etc/localtime
-    - dpkg-reconfigure --frontend noninteractive tzdata
     - apt update -y 
     - apt install -y git hugo neofetch
   script:
